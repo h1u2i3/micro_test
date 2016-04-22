@@ -8,7 +8,6 @@ class MicroTest
 
     def result
       result_string = []
-      puts @file
       result_string << "Test Failed: " + @error.message + " (RuntimeError) at " + @error.backtrace.grep(Regexp.new(@file_name)).join("\t\n")
       result_string << "\t" + @error.backtrace.join("\n\t")
       result_string.join("\n")
