@@ -1,3 +1,5 @@
+require 'micro_test'
+
 class FirstTest < MicroTest
   def setup
     @some = false

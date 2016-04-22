@@ -1,3 +1,5 @@
+require 'micro_test'
+
 class SecondTest < MicroTest
   def equal_test
     assert_equal 1, 2
