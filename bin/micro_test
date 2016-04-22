@@ -8,7 +8,7 @@ require 'micro_test'
 class CLI < Thor
   desc "test", "use test to run micro test."
   def test
-    Dir.glob("#{File.expand_path('../../test', __FILE__)}/*").map { |f| require f}
+    Dir.glob("#{File.expand_path('../../test', __FILE__)}/*").map { |f| require f }
     ::MicroTest.run
   end
 end
