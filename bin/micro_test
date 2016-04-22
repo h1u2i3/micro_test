@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+$: << File.expand_path('../../lib', __FILE__)
+
+require 'rubygems'
+require 'thor'
+require 'micro_test'
+
+class CLI < Thor
+  desc "test", "use test to run micro test."
+  def test
+    Dir.glob("#{File.expand_path('../../test', __FILE__)}/*").map { |f| require f}
+    ::MicroTest.run
+  end
+end
+
+CLI.start
